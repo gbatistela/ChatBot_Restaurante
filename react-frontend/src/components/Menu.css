@@ -1,0 +1,66 @@
+.menu-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.menu-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.menu-carousel {
+  display: flex;
+  overflow-x: auto; /* Habilita el desplazamiento horizontal */
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+.menu-card {
+  flex: 0 0 300px; /* Cada tarjeta tiene un ancho fijo */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+.menu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  color: #333;
+}
+
+.menu-card p {
+  padding: 0 1rem 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.scroll-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .scroll-button:hover {
+    background-color: #555;
+  }
+  

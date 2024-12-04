@@ -1,0 +1,184 @@
+
+body {
+  background-image: url(" portada_india1.jpg");
+  background-size: cover; /* Hace que la imagen cubra toda la página */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+header {
+  background-color: #08121b;
+  padding: 20px 0;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcccb;
+  transform: scale(1.2);
+}
+
+.hero {
+  text-align: center;
+  background: url("banner.jpg") no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background: #ff5733;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+  background-color: #ff7846;
+}
+
+section {
+  margin: 40px 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  animation: fadeIn 1s ease-in-out;
+}
+
+section h2 {
+  color: #ff5733;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.1) rotateY(5deg);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Chatbot estilos */
+#chatbot {
+  position: fixed; /* Fija el chatbot respecto a la ventana del navegador */
+  bottom: 20px; /* Separación desde la parte inferior */
+  right: 20px; /* Separación desde el borde derecho */
+  width: 350px; /* Ancho del chatbot */
+  max-height: 500px; /* Altura máxima para el chatbot */
+  background: #f4f4f4; /* Fondo */
+  border: 1px solid #ddd; /* Borde */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  overflow: hidden; /* Previene que el contenido se salga */
+}
+
+.chatbot-header {
+  background: #333; /* Fondo del encabezado */
+  color: #fff; /* Texto blanco */
+  padding: 10px; /* Espaciado interno */
+  cursor: pointer; /* Cursor de mano al hacer clic */
+  text-align: center; /* Centrado del texto */
+  border-top-left-radius: 10px; /* Redondeo esquina superior izquierda */
+  border-top-right-radius: 10px; /* Redondeo esquina superior derecha */
+}
+
+.chatbot-body {
+  display: none; /* Oculto por defecto (cuando minimizado) */
+}
+
+#chatbot:not(.minimized) .chatbot-body {
+  display: block; /* Visible si no está minimizado */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Habilitar desplazamiento horizontal */
+  scroll-behavior: smooth; /* Transición suave al deslizar */
+  padding: 20px 0;
+}
+
+.menu-slider::-webkit-scrollbar {
+  height: 8px; /* Altura del scroll */
+}
+
+.menu-slider::-webkit-scrollbar-thumb {
+  background: #ff5733; /* Color del scroll */
+  border-radius: 4px;
+}
+
+.menu-slider::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Fondo del scroll */
+}
+
+.menu-item {
+  flex: 0 0 auto; /* Permite que cada elemento ocupe su espacio */
+  width: 200px; /* Ancho fijo para cada tarjeta */
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  border-radius: 8px;
+}
+
+.menu-item:hover {
+  transform: scale(1.1) rotateY(5deg);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
