@@ -1,56 +1,41 @@
-/* Estilos para el footer */
+/* footer.css */
+
+/* Estilo para el contenedor del footer */
 .footer {
-  background-color: #333;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.footer-links a {
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #007bff;
-}
-
-.footer-links i {
-  font-size: 20px;
-}
-
-/* Asegura que el texto del copyright esté en el centro */
-footer p {
-  font-size: 14px;
-  margin-top: 20px;
-}
-
-/* Asegura que el footer sea responsivo */
-@media (max-width: 768px) {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Estilo para los enlaces */
   .footer-links {
-    flex-direction: column;
-    gap: 15px;
+    margin-bottom: 20px;
   }
-
-  footer p {
-    font-size: 12px;
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 10px;
+    font-size: 16px;
   }
-}
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo para las imágenes de los logos */
+  .footer-icon {
+    width: 20px;  /* Ajusta el tamaño del icono */
+    height: auto;
+    margin-right: 8px;  /* Espacio entre el logo y el texto */
+  }
+  
+  /* Estilo para el texto del copyright */
+  .footer p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  

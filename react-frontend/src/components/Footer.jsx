@@ -1,3 +1,4 @@
+// Footer.jsx
 import React from "react";
 import './footer.css'; // Asegúrate de tener un archivo de estilos
 
@@ -7,21 +8,27 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-links">
           <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-whatsapp"></i> WhatsApp
+            <img src="/logowhatsapp.png" alt="WhatsApp" className="footer-icon" />
+      
           </a>
           <a href="https://www.instagram.com/tu_instagram" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i> Instagram
+            <img src="/instagram.avif" alt="Instagram" className="footer-icon" />
+            
           </a>
           <a href="mailto:contacto@restaurante.com">
-            <i className="fas fa-envelope"></i> Correo
+            <img src="/image.jpg" alt="Correo" className="footer-icon" />
+            
           </a>
           <a href="https://goo.gl/maps/tu-direccion" target="_blank" rel="noopener noreferrer">
-            <i className="fas fa-map-marker-alt"></i> Dirección
+            <img src="/assets/images/location-logo.png" alt="Dirección" className="footer-icon" />
+            Dirección
           </a>
           <a href="#sucursal" target="_blank" rel="noopener noreferrer">
-            <i className="fas fa-building"></i> Sucursal
+            <img src="/assets/images/building-logo.png" alt="Sucursal" className="footer-icon" />
+            Sucursal
           </a>
         </div>
+
         <p>© 2024 Restaurante - Todos los derechos reservados</p>
       </div>
     </footer>
@@ -29,4 +36,3 @@ function Footer() {
 }
 
 export default Footer;
-
