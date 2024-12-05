@@ -1,5 +1,5 @@
 import React from "react";
-import "./Menu.css"; // Archivo de estilos separado
+import "./components/Menu.css"; // Archivo de estilos separado
 
 function Menu() {
   const menus = [

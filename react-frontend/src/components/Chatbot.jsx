@@ -1,6 +1,6 @@
 // Chatbot.jsx
 import React, { useEffect } from "react";
-import "./Chatbot.css"; // Importa el archivo de estilos chatbot.css
+import "./components/Chatbot.css"; // Importa el archivo de estilos chatbot.css
 
 const Chatbot = () => {
   useEffect(() => {
