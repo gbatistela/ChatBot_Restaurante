@@ -1,14 +1,17 @@
 # Author: Dhaval Patel. Codebasics YouTube Channel
 
 import mysql.connector
+import os
+
+# Conexión global
 global cnx
 
 cnx = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root1234",
-    database="pandeyji_eatery"
-)
+    host=os.getenv("DB_HOST", "localhost"),  # Cambia a la variable de entorno correcta
+    user=os.getenv("DB_USER", "root"),
+    password=os.getenv("DB_PASSWORD", "root1234"),
+    database=os.getenv("DB_NAME", "pandeyji_eatery")
+)               
 
 # Function to call the MySQL stored procedure and insert an order item
 def insert_order_item(food_item, quantity, order_id):
