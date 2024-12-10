@@ -2,40 +2,50 @@
 
 /* Estilo para el contenedor del footer */
 .footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Estilo para los enlaces */
-  .footer-links {
-    margin-bottom: 20px;
-  }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    margin: 0 10px;
-    font-size: 16px;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Estilo para las imágenes de los logos */
-  .footer-icon {
-    width: 20px;  /* Ajusta el tamaño del icono */
-    height: auto;
-    margin-right: 8px;  /* Espacio entre el logo y el texto */
-  }
-  
-  /* Estilo para el texto del copyright */
-  .footer p {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  
+  background-color: #eeeeee;
+  color: rgba(0, 0, 0, 0.932);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilo para los enlaces */
+.footer-links {
+  display: flex; /* Usamos flex para alinear los elementos */
+  justify-content: center; /* Centra los enlaces horizontalmente */
+  align-items: center; /* Alinea los logos verticalmente */
+  margin-bottom: 20px;
+  gap: 20px; /* Espacio entre enlaces */
+}
+
+.footer-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: flex; /* Flex también en los enlaces individuales */
+  align-items: center; /* Alineación vertical */
+  font-size: 16px;
+}
+
+/* Estilo para las imágenes de los logos */
+.footer-icon {
+  width: 30px; /* Tamaño uniforme para los logos */
+  height: auto;
+  margin-right: 8px; /* Espacio entre el logo y el texto */
+}
+
+.footer-icon-ig {
+  width: 40px; /* Tamaño uniforme para los logos */
+  height: auto;
+  margin-right: 8px; /* Espacio entre el logo y el texto */
+}
+
+.footer-icon-maps {
+  width: 40px; /* Tamaño uniforme para los logos */
+  height: auto;
+  margin-right: 8px; /* Espacio entre el logo y el texto */
+}
+
+/* Estilo para el texto del copyright */
+.footer p {
+  font-size: 14px;
+  margin-top: 10px;
+}

@@ -1,6 +1,16 @@
+/* Contenedor principal que envuelve todo */
+.app-container {
+  display: flex;
+  flex-direction: column; /* Los componentes se apilan verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: flex-start; /* Los elementos están alineados desde la parte superior */
+  min-height: 100vh; /* Asegura que la página ocupe todo el alto de la pantalla */
+  margin: 0;
+}
+
 
 body {
-  background-image: url(" portada_india1.jpg");
+  background-color: #030507;
   background-size: cover; /* Hace que la imagen cubra toda la página */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */

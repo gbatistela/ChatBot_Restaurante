@@ -1,16 +1,21 @@
 import mysql.connector
 import os
 import logging
+from dotenv import load_dotenv
+
 
 # Configuración de logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-# Validar que las variables de entorno requeridas estén configuradas
+
+load_dotenv()  # Carga las variables de entorno desde el archivo .env
+
 REQUIRED_ENV_VARS = ["DB_HOST", "DB_USER", "DB_PASSWORD", "DB_NAME"]
 
 for var in REQUIRED_ENV_VARS:
     if not os.getenv(var):
         raise EnvironmentError(f"Missing required environment variable: {var}")
+
 
 # Función para obtener una conexión a la base de datos
 def get_connection():

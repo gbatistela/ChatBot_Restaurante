@@ -1,66 +1,185 @@
+/* General: Estilo de la sección del menú */
 .menu-section {
-  padding: 2rem;
   text-align: center;
-  background-color: #f8f8f8;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  overflow-x: hidden; /* Evita desbordamiento horizontal */
 }
 
 .menu-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
   color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
+/* Controles del carrusel */
+.menu-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra los botones */
+  gap: 10px;
+  margin-top: 20px;
+  overflow-x: hidden;
+  position: relative; /* Asegura posicionamiento relativo para los botones */
+}
+
+/* Botones de desplazamiento */
+/* Estilo común para ambos botones */
+.scroll-button {
+  position: fixed; /* Fija el botón en la pantalla */
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.scroll-button:hover {
+  background-color: #e68900;
+  transform: scale(1.1);
+}
+
+/* Posición del botón izquierdo */
+.scroll-button.left {
+  left: 20px; /* 20px desde el borde izquierdo */
+  bottom: 20px; /* Fijo en la parte inferior */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(
+    -50%
+  ); /* Asegura que el botón esté centrado verticalmente */
+}
+
+/* Posición del botón derecho */
+.scroll-button.right {
+  right: 50px; /* 20px desde el borde derecho */
+  bottom: 20px; /* Fijo en la parte inferior */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(
+    -50%
+  ); /* Asegura que el botón esté centrado verticalmente */
+}
+
+/* Carrusel */
 .menu-carousel {
   display: flex;
-  overflow-x: auto; /* Habilita el desplazamiento horizontal */
-  gap: 1rem;
-  padding: 1rem 0;
-  scroll-behavior: smooth; /* Desplazamiento suave */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 10px;
+  max-width: 100%; /* Limita el ancho del carrusel al contenedor */
+  box-sizing: border-box; /* Incluye padding dentro del ancho total */
 }
 
+.menu-carousel::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento */
+}
+
+/* Tarjetas del menú */
 .menu-card {
-  flex: 0 0 300px; /* Cada tarjeta tiene un ancho fijo */
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 0 0 200px; /* Ancho fijo para las tarjetas */
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .menu-card:hover {
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.6);
 }
 
+/* Imagen en las tarjetas */
 .menu-card img {
   width: 100%;
-  height: 200px;
+  height: 160px;
   object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
 
+.menu-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Título de las tarjetas */
 .menu-card h3 {
   font-size: 1.5rem;
-  margin: 1rem 0 0.5rem;
-  color: #333;
+  font-weight: bold;
+  margin: 15px 0 10px;
+  color: #555;
 }
 
+/* Descripción de las tarjetas */
 .menu-card p {
-  padding: 0 1rem 1rem;
-  color: #666;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: #777;
+  margin: 0 15px 20px;
+  line-height: 1.6;
 }
 
-.scroll-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 0 1rem;
-    transition: background-color 0.3s;
+/* Pie de texto */
+.menu-footer {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .menu-card {
+    flex: 0 0 180px; /* Reduce el ancho de las tarjetas */
   }
-  
-  .scroll-button:hover {
-    background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .menu-section {
+    padding: 30px 10px;
   }
-  
+
+  .menu-section h2 {
+    font-size: 2rem;
+  }
+
+  .menu-card {
+    flex: 0 0 160px;
+  }
+
+  /* Ajusta los botones de desplazamiento en pantallas más pequeñas */
+  .scroll-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .menu-card {
+    flex: 0 0 140px;
+  }
+
+  /* Ajusta aún más el tamaño de los botones en pantallas muy pequeñas */
+  .scroll-button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}

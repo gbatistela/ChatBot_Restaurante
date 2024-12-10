@@ -24,33 +24,21 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <img
-              src="/instagram.avif"
+              src="/instagram.png"
               alt="Instagram"
-              className="footer-icon"
+              className="footer-icon-ig"
             />
           </a>
-          <a href="mailto:contacto@restaurante.com">
+          <a href="restaurant_bart@gmail.com">
             <img src="/image.jpg" alt="Correo" className="footer-icon" />
           </a>
           <a
             href="https://goo.gl/maps/tu-direccion"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            <img
-              src="/assets/images/location-logo.png"
-              alt="Dirección"
-              className="footer-icon"
-            />
-            Dirección
-          </a>
-          <a href="#sucursal" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/assets/images/building-logo.png"
-              alt="Sucursal"
-              className="footer-icon"
-            />
-            Sucursal
+          > 
+            <img src="/mapa.jpg" alt="Dirección" className="footer-icon-maps" />
+            
           </a>
         </div>
 
