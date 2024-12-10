@@ -13,10 +13,10 @@ app = FastAPI()
 # Permitir solicitudes desde cualquier origen (en producción puedes restringirlo a dominios específicos)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Permite todas las solicitudes
+    allow_origins=["https://mi-frontend.vercel.app"],  # Agrega el dominio de tu frontend en producción
     allow_credentials=True,
-    allow_methods=["*"],  # Permite todos los métodos
-    allow_headers=["*"],  # Permite todos los encabezados
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 

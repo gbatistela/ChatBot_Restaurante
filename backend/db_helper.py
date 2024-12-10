@@ -3,12 +3,11 @@ import os
 import logging
 from dotenv import load_dotenv
 
-
 # Configuración de logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-
-load_dotenv()  # Carga las variables de entorno desde el archivo .env
+# Cargar las variables de entorno desde el archivo .env
+load_dotenv()
 
 REQUIRED_ENV_VARS = ["DB_HOST", "DB_USER", "DB_PASSWORD", "DB_NAME"]
 
@@ -16,15 +15,20 @@ for var in REQUIRED_ENV_VARS:
     if not os.getenv(var):
         raise EnvironmentError(f"Missing required environment variable: {var}")
 
-
 # Función para obtener una conexión a la base de datos
 def get_connection():
-    return mysql.connector.connect(
-        host=os.getenv("DB_HOST", "localhost"),
-        user=os.getenv("DB_USER", "root"),
-        password=os.getenv("DB_PASSWORD", "root1234"),
-        database=os.getenv("DB_NAME", "pandeyji_eatery")
-    )
+    try:
+        # Usar las variables de entorno para obtener los valores de la base de datos
+        return mysql.connector.connect(
+            host=os.getenv("DB_HOST", "localhost"),  # Usar la URL proporcionada por Render o el servicio de la base de datos
+            user=os.getenv("DB_USER", "root"),
+            password=os.getenv("DB_PASSWORD", "root1234"),
+            database=os.getenv("DB_NAME", "pandeyji_eatery")
+        )
+    except mysql.connector.Error as err:
+        logging.error(f"Error connecting to database: {err}")
+        return None
+    
 
 # Función para obtener todas las órdenes del restaurante
 def get_all_orders():
