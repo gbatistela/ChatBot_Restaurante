@@ -5,8 +5,20 @@ from fastapi.responses import JSONResponse
 import logging
 import db_helper
 import generic_helper
+from db_helper import get_all_orders
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# Permitir solicitudes desde cualquier origen (en producción puedes restringirlo a dominios específicos)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Permite todas las solicitudes
+    allow_credentials=True,
+    allow_methods=["*"],  # Permite todos los métodos
+    allow_headers=["*"],  # Permite todos los encabezados
+)
+
 
 # Logger para depuración
 logging.basicConfig(level=logging.INFO)
@@ -14,10 +26,19 @@ logging.basicConfig(level=logging.INFO)
 # Diccionario para órdenes en progreso
 inprogress_orders = {}
 
+
+
 # Ruta raíz para solicitudes GET
 @app.get("/")
 async def root():
     return {"message": "Restaurant Chatbot API is running!"}
+
+
+@app.get("/orders")
+def get_orders():
+    orders = get_all_orders()  # Obtiene las órdenes de la base de datos
+    return {"orders": orders}
+
 
 # Ruta para manejar solicitudes POST desde Dialogflow
 @app.post("/")

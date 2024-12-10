@@ -26,6 +26,30 @@ def get_connection():
         database=os.getenv("DB_NAME", "pandeyji_eatery")
     )
 
+# Función para obtener todas las órdenes del restaurante
+def get_all_orders():
+    try:
+        with get_connection() as cnx:
+            with cnx.cursor(dictionary=True) as cursor:
+                query = """
+                    SELECT 
+                        o.order_id AS id, 
+                        GROUP_CONCAT(f.name SEPARATOR ', ') AS items, 
+                        SUM(o.quantity * f.price) AS total, 
+                        ot.status AS order_status
+                    FROM orders o
+                    JOIN food_items f ON o.item_id = f.item_id
+                    JOIN order_tracking ot ON o.order_id = ot.order_id
+                    GROUP BY o.order_id, ot.status
+                """
+                cursor.execute(query)
+                result = cursor.fetchall()
+        return result
+    except mysql.connector.Error as err:
+        logging.error(f"Error fetching orders: {err}")
+        return []
+
+        
 # Función para insertar un ítem de pedido utilizando un procedimiento almacenado
 def insert_order_item(food_item, quantity, order_id):
     try:

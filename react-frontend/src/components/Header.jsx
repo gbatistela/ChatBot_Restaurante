@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Importa Link
 import "./Header.css";
 
 const Header = () => {
@@ -16,16 +17,17 @@ const Header = () => {
       <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <Link to="/">Home</Link> {/* Cambia href por Link */}
           </li>
           <li>
-            <a href="#about">Menu</a>
+            <Link to="/">Menu</Link> {/* Cambia href por Link */}
           </li>
           <li>
-            <a href="#services">Contacto</a>
+            <Link to="/footer">Contacto</Link> {/* Cambia href por Link */}
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link to="/orders">Órdenes</Link>{" "}
+            {/* Nueva página para las órdenes */}
           </li>
         </ul>
       </nav>
