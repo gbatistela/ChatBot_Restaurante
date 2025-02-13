@@ -15,7 +15,7 @@ function OrdersTable() {
 
   // Función para cargar las órdenes desde el endpoint
   useEffect(() => {
-    fetch("https://chatbot-restaurante.onrender.com/orders")
+    fetch("http://127.0.0.1:8000/orders")
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Verifica lo que llega aquí

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "chat-restaurant-egcl",
+  "private_key_id": "91a6c589faebcd510fd2dc1764402c6afc3d7aca",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDtAorU+YMqNv4y\nYlbEQyHlGVYDGKVGSFwYE3/SWKLZKwpyPCuAWwx1hQ8cn0ERNBimaTfvgcAf0Lcs\nZuhkIbRxB4FfJRExBABJHGMh1YWpEE9z00zXTfdnWm7cPslOBVwsq3y/J8g2FrbM\ns9nQLpj1+KfRw0krImz1wcR86ULL9wk3/wER1A3ViGrhp0dMuFE1vbgVuYmwnBRD\nvmer4vNQBqL/44o6iJJ+Sz7chiuCAblSsQGoqB1gZItIkAyJQ0GDcgzYIJrRRQvl\nickz4ncmH2DMFOvaJ5fIpstKxQkULZSHAKMthSl5/6BY5ReTTTxxYjexD1NgXA3p\nipZ13eG5AgMBAAECggEABrcs4CvhhOa+s6AR/zW7jJTRjHA1+9fGu9joZR+lUTV1\nJZD7MF2EE076nPzaZWAkqnYIEEJMw3bQv3jH/dEid+LQTkLMEEE7UXCbbETZgjv7\nBr6WanHw82dk0kFGLdUcv3Hf39ockNAtpeW0fRlagXrmJTbdFSEnCLY3LABMNMa+\nCM9iqN9LFCyEDgIc9UBVafpOBC4ZvWo6OuvI95wO6XnHm+TpwWnxXzzg0YiVuONO\nK8GdN5AyCjzghA5Hi6r8dSYU/uuxLjCkF1B/U0REIuiemJ+sGYfpYxKwOlc1HcVU\nmBgwl4g8xZpZTSgDBvE33OOiGMjy70cv+B0QhR3SfQKBgQD+2Z3NteJw8ifZqaV5\ndnM26k1joOI9SvuSmT6p8bloacJDAT8bnuyb+OxXMxoZmfUErOdqkFbSNdIsB1P8\nSv7QtH1Xgq6P7xQM6Bf/keC/vyPabvxwRHVnU/NdjgwrEwJNQGldIxxB1PuqasX/\n4hDWHQQU717qthqTWsInstLZdQKBgQDuFFF9G0eqSvIU+cDyAnSSpvY2w2tNe+OY\n06e3I2F5+rS/Rg7Rq7DdVGOMyhn8rf/q+hBJ6rt1ovL9uI2yhOcVvWhd/ClsotBh\nEC5qqKjfL3VZ+vwUjCJEcp9iNUMwRNab/pTrBauUnNEadKFN1iKLFQc8wu/z8tth\nMPicOxtatQKBgQCE/toMVWQDn0vOmmrBlWARA3s5h+cpJ21cFt8N3xjr9W0sfIUL\njAdcai4kX4W6YI7uTrFB+mtkrjOtSHG60wRhtB9JQOiKMrEa/zAu7lkEl+JFBvB0\nQjWmo7f4Vb3h6Lylxfx2X3FKpbRkPe5wV/CDXIcZycWV5Uy/I3j5MKg6VQKBgEBf\nTgk9rwrkaMAzJ3BIKazdaAU2oXS54rgXwmlKL7kDiIuPLcKTYab2glQ28P/ZLDEk\nm/LgfP85p+niVK3IMZM3O1juLWUqQJ19+o7sO3zdICXMLwx/N2S6eU3ciOYsNrrH\nAwzo45OzMvasQlEBbSWd8e8D5k1XhOmqjA3yDVthAoGAY491Nal8gtZ4iDG1XOSl\nHkWyIvF29MTb8biJsQn+oTyrESyXlf7QyBTvLWj8C0BKO54Zp82SMIzPKkffWvYD\nArK45KcqVlpMiwbouxBQ/mkuQZgU+mAOBvWfrg+m6M9dEkMaaWgc+gdsqlRt+N1x\nghZZAAibUKlyQFUtcPnlOE4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "cuenta-servicio@chat-restaurant-egcl.iam.gserviceaccount.com",
+  "client_id": "107842940514326701944",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cuenta-servicio%40chat-restaurant-egcl.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

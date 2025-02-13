@@ -137,7 +137,7 @@ def add_to_order(parameters: dict, session_id: str):
             inprogress_orders[session_id] = new_food_dict
 
         order_str = generic_helper.get_str_from_food_dict(inprogress_orders[session_id])
-        fulfillment_text = f"So far you have: {order_str}. Do you need anything else?"
+        fulfillment_text = f"Hasta ahora tienes: {order_str}. ¿Necesitas algo más?"
 
     return JSONResponse(content={
         "fulfillmentText": fulfillment_text
@@ -217,9 +217,8 @@ def track_order(parameters: dict, session_id: str):
         "fulfillmentText": fulfillment_text
     })
 
-
-
 """ 
+
 git add .
 git commit -m "3"
 git push origin main
